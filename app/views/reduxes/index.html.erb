@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div id="content"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reduxes.each do |redux| %>
+      <tr>
+        <td><%= link_to 'Show', redux %></td>
+        <td><%= link_to 'Edit', edit_redux_path(redux) %></td>
+        <td><%= link_to 'Destroy', redux, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Redux', new_redux_path %>
